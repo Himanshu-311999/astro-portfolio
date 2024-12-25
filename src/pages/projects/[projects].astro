@@ -36,13 +36,13 @@ import { Image } from "astro:assets";
     },
     },
     {
-      params: { projects: "todolist" },
+      params: { projects: "fourth" },
       props: {
         name: "Todo List",
         desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
     },
     },];
- }) satisfies GetStaticPaths;
+ });
 
 
  const { projects } = Astro.params;
