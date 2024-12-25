@@ -1,11 +1,36 @@
 ---
+import { Image } from 'astro:assets';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="Himanshu Portfolio Site" seoTitle="Software Engineer" seoDesc="'Astro JS Portfolio" >
+	<div class="w-8/12 md:w-6/12 mx-auto">
+		<h1 class="text-5xl md:text-6xl text-center">
+			Hey 👋, I am Himanshu!
+		</h1>
+		<Image class="mt-4 mx-auto rounded" src="/images/Himanshu-Img.jpg" alt="Image" width="300" height="300"/>
+	</div>
+
+	<div id="typed-strings">
+		<p>I am <strong>Software Engineer</strong></p>
+		<p>I <em>work</em> with Astro, React, Next, Node, Express</p>
+	</div>
+
+    <div class="text-center mt-6"><span id="typed"></span></div>
+  </div>
+</MainLayout>
+
+<script>
+  import Typed from "typed.js";
+
+  var typed = new Typed("#typed", {
+    stringsElement: "#typed-strings",
+    typeSpeed: 50,
+    loop: true,
+  });
+</script>

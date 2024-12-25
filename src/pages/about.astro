@@ -1,0 +1,63 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from 'astro:assets';
+
+---
+
+<MainLayout
+  title="Himanshu's About Info"
+  seoTitle="About Himanshu Mukhedkar, Software Engineer"
+  seoDesc={"Hi there! My name is Himanshu, and I'm a software engineer " +
+    "with over 4 years of experience in the industry"}
+>
+  <div class="w-6/12 mx-auto">
+    <h1 class="text-5xl">About Me 😉</h1>
+    <Image 
+        src="/images/about.jpg"
+        alt="about me"
+        width="600"
+        height="600"
+        class="my-2 shadow-md drop-shadow-[10px_10px_35px_rgba(39,245,131,0.6)]"
+    />
+    <p>
+      Hi there! My name is Himanshu Mukhedkar, and I'm a software engineer with over 4
+      years of experience in the industry. I'm passionate about building
+      high-quality software that solves real-world problems and makes people's
+      lives easier.
+    </p><br />
+    <p>
+      My expertise lies in full-stack development, with a focus on web
+      applications. I'm proficient in a variety of programming languages,
+      and I'm comfortable working with
+      tools and frameworks like React, Node.js, and Express.js.
+    </p><br />
+    <p>
+      In addition to my technical skills, I pride myself on my ability to
+      collaborate with team members and communicate effectively with
+      stakeholders. I'm a natural problem solver and enjoy tackling complex
+      challenges.
+    </p><br />
+    <p>
+      When I'm not coding, you can find me hiking in the mountains or playing
+      cricket. I'm always looking for new opportunities to work
+      on exciting projects, so if you're interested in collaborating, please
+      feel free to get in touch. Thanks for stopping by!
+    </p>
+
+    <section id="contact" class="">
+        <h1 class="my-10 text-center font-bold text-4xl">
+            Contact
+            <hr class="w-6 h-1 mx-auto my-4 bg-teal-500 border-0 rounded"></hr>
+        </h1>
+
+        <h4>If you want us to work together, have any questions, my inbox is always open. Whether I just want to say hi, I&apos;ll try my best to get back to you! Cheers!</h4>
+        <div class="flex justify-center items-center my-4">
+        <a href="mailto:himanshumukhedkar@gmail.com" 
+          class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        >
+            Say Hello
+        </a>
+        </div>
+      </section>
+  </div>
+</MainLayout>

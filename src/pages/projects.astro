@@ -1,0 +1,36 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from 'astro:assets';
+
+---
+
+<MainLayout title="Himashu's Project" seoTitle="Project with Astro, React" 
+    seoDesc="Portfolio project using Astro and Tailwind CSS"
+>
+   <div class="w-8/12 lg:w-6/12 mx-auto">
+    <h1 class="text-5xl my-2">Projects</h1>
+    <div class="grid md:grid-cols-2 gap-2">
+        
+        <div>
+            <h3>Cineverse</h3>
+            <a href="projects/cineverse"><Image class="rounded" src="/images/cineverse.png"  alt="Cineverse img" width="300" height="600"/></a>
+        </div>
+        
+        <div>
+            <h3>Git Repo dashboard UI</h3>
+            <a href="projects/Git-Dashboard-UI"><Image class="rounded" src="/images/Git-Dashboard-UI.png"  alt="Dashboard img" width="300" height="600"/></a>
+        </div>
+
+        <div>
+            <h3>Budget Tracker</h3>
+            <a href="projects/budget-tracker"><Image class="rounded" src="/images/budget-tracker.png"  alt="budget-tracker img" width="300" height="600"/></a>
+        </div>
+
+        <div>
+            <h3>Todo List</h3>
+            <a href="projects/fourth"><Image class="rounded" src="/images/fourth.png"  alt="project img" width="300" height="300"/></a>
+        </div>
+
+    </div>
+   </div>
+</MainLayout>

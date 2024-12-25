@@ -1,0 +1,70 @@
+---
+import type { GetStaticPaths } from "astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+
+// Note - use async -await for server data, 
+// This is Static now 
+ export const getStaticPaths = (() => {
+    
+    return [
+    {
+      params: { projects: "cineverse" },
+      props: {
+        name: "cineverse",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+        githubLink: "https://github.com/Himanshu-311999/React-Redux-Toolkit-Movie",
+        projectlink: "https://himanshu-reduxtoolkit-movie-app.netlify.app/",
+    },
+    },
+    {
+      params: { projects: "Git-Dashboard-UI" },
+      props: {
+        name: "Git Repositories Dashboard - Next JS",
+        desc: "It is a web app that buit using NextJS-13. It is used to find repositories, add new repositories etc.",
+        githubLink:"https://github.com/Himanshu-311999/Next-JS-App",
+        projectlink:"https://next-js-app-rust-three.vercel.app/ ",
+      },
+    },
+    {
+      params: { projects: "budget-tracker" },
+      props: {
+        name: "Budget Tracker",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+        githubLink: "https://github.com/Himanshu-311999/Budget-Tracker",
+        projectlink: "https://himanshu-budget-tracker.netlify.app",
+    },
+    },
+    {
+      params: { projects: "todolist" },
+      props: {
+        name: "Todo List",
+        desc: "The project is a simple 'To-Do List' application built using React. Users can add, edit, and delete tasks from the list. The application is built using a single component that handles the rendering of the list and the form for adding new tasks. The component uses React's useState hook to manage the state of the tasks. Overall, it is a great introductory project for someone looking to learn React.",
+    },
+    },];
+ }) satisfies GetStaticPaths;
+
+
+ const { projects } = Astro.params;
+ const { name, desc, githubLink, projectlink } = Astro.props;
+
+---
+
+<MainLayout>
+    <section class="mx-auto w-3/6">
+        <Image class="rounded" src=`/images/${projects}.png` alt="Projct Image" width="600" height="600" />
+        <div class="flex flex-row align-bottom space-x-4">
+            <h1 class="font-bold mt-4">Project - {name}</h1>  <i class="fa fa-arrow-circle-o-down"></i>
+            {githubLink &&
+                <a href={githubLink} target="_blank" class="mt-2">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>}
+                
+            {projectlink && <a href={projectlink} target="_blank" class="text-white mt-2 hover:text-gray-400">
+                <i class="fas fa-download fa-lg"></i>
+            </a>}
+          </div>
+        <p>{desc}</p>
+        <section></section>
+    </section>
+</MainLayout>
