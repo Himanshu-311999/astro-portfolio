@@ -5,5 +5,9 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  build: {
+    outDir: "dist", // Ensure this matches your deployment folder
+  },
+  trailingSlash: "never", // Or "always" depending on your preference
 });
