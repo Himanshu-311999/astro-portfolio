@@ -9,8 +9,8 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
 
-  // build: {
-  //   outDir: "dist", // Ensure this matches your deployment folder
-  // },
+  build: {
+    outDir: "dist", // Ensure this matches your deployment folder
+  },
   trailingSlash: "never", // Or "always" depending on your preference
 });
