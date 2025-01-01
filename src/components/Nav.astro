@@ -1,6 +1,18 @@
 ---
 import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
 
+// interface NavItem {
+//   id: number;
+//   menuName: string;
+//   hrefVal: string;
+// }
+
+// interface Props {
+//   navItems: NavItem[];
+// }
+
+// const { navItems } = Astro.props;
+
 ---
 
 <header class="lg:flex p-5 gap-5">
@@ -13,6 +25,11 @@ import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu
         </div>
         <MenuItems class="hidden lg:flex">
             <ul class="flex flex-col lg:flex-row lg:gap-5">
+                <!-- {navItems?.map((item) => (
+                    <li>
+                      <a href={item.hrefVal}>{item.menuName}</a>
+                    </li>
+                  ))} -->
               <li><a href="/">Home</a></li>
               <li><a href="/projects">Project</a></li>
               <li><a href="/about">About</a></li>
