@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.4",
-    "@astrojs/vercel": "^8.0.1",
     "@iconify/icons-mdi": "^1.2.48",
     "@iconify/json": "^2.2.288",
     "astro": "^5.1.1",

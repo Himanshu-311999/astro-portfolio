@@ -6,21 +6,22 @@ import Footer from "../components/Footer.astro";
 const { title, seoDesc, seoTitle } = Astro.props;
 
 // Fetch navigation data from the API
-const response = await fetch("http://127.0.0.1:1337/api/nav-items");
-const navData = await response.json();
+// const response = await fetch("http://127.0.0.1:1337/api/nav-items");
+// const navData = await response.json();
 
-const navItems = navData.data.map((item: any) => ({
-  id: item.id,
-  menuName: item.menuName,
-  hrefVal: item.hrefVal,
-}));
+// const navItems = navData.data.map((item: any) => ({
+//   id: item.id,
+//   menuName: item.menuName,
+//   hrefVal: item.hrefVal,
+// }));
 
 ---
 
 <html>
   <MainHead title={title} seoTitle={seoTitle} seoDesc={seoDesc} />
   <body class="bg-slate-900 text-white grid gap-0">
-    <Nav navItems={navItems} />
+    <!-- <Nav navItems={navItems} /> -->
+    <Nav />
     <slot />
     <Footer />
     <style>
