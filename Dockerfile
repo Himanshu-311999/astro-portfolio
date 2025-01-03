@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the default port Astro uses
-EXPOSE 3000
+EXPOSE 4321
 
 # Start the Astro server
-CMD ["yarn", "run", "dev"]
+CMD ["yarn", "run", "dev", "--host"]
